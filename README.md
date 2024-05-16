@@ -10,6 +10,9 @@ This is a simple password generator application built using React, Vite, and PNP
 - [Contributing](#contributing)
 - [License](#license)
 
+## Live Preview
+[Passowrd Generator v1.0](https://password-generator-henna-eight.vercel.app/)
+
 ## Installation
 
 To run this application locally, follow these steps:
