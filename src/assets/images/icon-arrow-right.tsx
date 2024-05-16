@@ -4,11 +4,7 @@ interface ArrowLeftInterface {
 
 const ArrowLeft = ({ className }: ArrowLeftInterface) => {
   return (
-    <svg
-      width="12"
-      height="12"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18">
       <path
         fill="#24232C"
         className={className}

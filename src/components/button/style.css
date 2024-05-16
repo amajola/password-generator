@@ -9,6 +9,7 @@
     justify-content: center;
     border: var(--border-size) solid var(--color-neon-gren);
     text-decoration: unset;
+    gap: var(--gap);
 }
 
 .button-container:hover {
@@ -18,6 +19,7 @@
 }
 
 .arrow-icon {
+    transform: scale(1.5);
     fill: var(--color-very-dark-gray);
 }
 
