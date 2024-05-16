@@ -30,7 +30,6 @@ const Input = ({ value, onChange }: InputInterface) => {
         onChange={onChange}
         onFocus={() => setHovered(!hovered)}
         onBlur={() => setHovered(!hovered)}
-        onClick={() => onCopy()}
       ></input>
       <CopyToClipboard text={value ?? ""} onCopy={onCopy}>
         <button className="icon-container">
