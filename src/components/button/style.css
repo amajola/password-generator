@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     border: var(--border-size) solid var(--color-neon-gren);
+    text-decoration: unset;
 }
 
 .button-container:hover {
