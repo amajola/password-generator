@@ -1,7 +1,3 @@
-Sure, let's update the README to reflect the usage of Vite and PNPM:
-
----
-
 # Password Generator App
 
 This is a simple password generator application built using React, Vite, and PNPM. It allows users to generate secure passwords based on specified criteria such as length and character types.
