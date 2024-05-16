@@ -16,9 +16,10 @@ type OptionType = {
 
 function App() {
   const [passwordLenght, setPasswordLenght] = React.useState(0);
-  const [password, setPassword] = React.useState<string | null>(null);
+  const [password, setPassword] = React.useState<string>("");
+  const [isManualInput, setIsManualInput] = React.useState(false);
   const [options, setOptions] = React.useState<OptionType>({
-    uppercase: false,
+    uppercase: true,
     lowercase: true,
     numbers: true,
     symbols: true,
@@ -29,10 +30,11 @@ function App() {
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
+    if (password) setPasswordLenght(password?.length);
   };
 
   React.useEffect(() => {
-    if (passwordLenght > 0) {
+    if (passwordLenght > 0 && !isManualInput) {
       setPassword(
         generatePassword(
           passwordLenght,
@@ -42,10 +44,11 @@ function App() {
           options.numbers,
         ).slice(0, passwordLenght),
       );
-    } else setPassword("");
-  }, [passwordLenght, options]);
+    } else if (passwordLenght === 0) setPassword("");
+  }, [passwordLenght, isManualInput, options]);
 
   React.useEffect(() => {
+    setPasswordLenght(password?.length);
     setPasswordStrenght(checkPasswordStrength(password ?? ""));
   }, [password]);
 
@@ -56,6 +59,7 @@ function App() {
     if (name) {
       const noOptionSelected =
         Object.values(options).filter((option) => option === true).length > 1;
+      // Check if any option is selected or if the clicked option is being changed
       if (noOptionSelected || !options[name as keyof OptionType]) {
         setOptions({ ...options, [name]: !options[name as keyof OptionType] });
       }
@@ -64,10 +68,18 @@ function App() {
 
   return (
     <div className="container">
-      <Input value={password} onChange={handlePasswordChange} />
+      <Input
+        value={password}
+        onChange={handlePasswordChange}
+        setIsManualInput={setIsManualInput}
+      />
       <div className="body-container">
         <div className="body-padding">
-          <Slider value={passwordLenght} setValue={setPasswordLenght} />
+          <Slider
+            value={passwordLenght}
+            setValue={setPasswordLenght}
+            setIsManualInput={setIsManualInput}
+          />
           <div className="checkbox-container">
             <Checkbox
               name="uppercase"
