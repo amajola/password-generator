@@ -1,0 +1,69 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("./assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "JetBrainsMono Italic";
+    src: url("./assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-style: italic;
+}
+
+.heading-large {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: var(--font-size-lg);
+    line-height: var(--font-lineHeight-lg);
+}
+
+.heading-medium {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: var(--font-size-md);
+    line-height: var(--font-lineHeight-md);
+}
+
+.body {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: var(--font-size-body);
+    line-height: var(--font-lineHeight-body);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.body-container {
+    box-sizing: border-box;
+    background-color: var(--color-dark-gray);
+}
+
+.body-padding {
+    margin: var(--spacing-box-xl);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) + 1em);;
+}
+
+@media only screen and (max-width: 600px) {
+  .body-padding {
+    margin: var(--spacing-box-sm);
+  }
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    width: 100%;
+}

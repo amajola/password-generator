@@ -1,0 +1,60 @@
+:root {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    --color-gray: #817d92;
+    --color-dark-gray: #24232c;
+    --color-almost-white: #e6e5ea;
+    --color-very-dark-gray: #18171f;
+    --color-neon-gren: #a4ffaf;
+    --color-red: #f64a4a;
+    --color-orange: #fb7c58;
+    --color-yellow: #f8cd65;
+
+    --spacing-box-xl: 34px 32px;
+    --spacing-box-sm: 14px 12px;
+    --spacing-box-sm-vertical: 12px;
+    --spacing-box-xl-vertical: 32px;
+    --spacing-box-sm-horizontal: 34px;
+    --spacing-box-xl-horizontal: 14px;
+    --spaceing-icon: 16px;
+
+    --min-button-size: 64px;
+    --border-size: 2px;
+    --checkbox-size: 20px;
+    --checkbox-radius: 4px;
+    --input-size: 80px;
+    --font-size-lg: 32px;
+    --font-size-md: 24px;
+    --font-size-body: 18px
+    --font-lineHeight-lg: 43px;
+    --font-lineHeight-md: 32px;
+    --font-lineHeight-body: 23px;
+    --gap: 1em;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--color-very-dark-gray);
+    color: var(--color-almost-white);
+
+    /* To-do Find out what is happening here */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* overflow: hidden; */
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 375px) {
+        overflow-y: scroll;
+        display: block;
+    }
+}

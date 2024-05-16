@@ -1,0 +1,29 @@
+.button-container {
+    border: unset;
+    width: 100%;
+    min-height: var(--min-button-size);
+    color: var(--color-dark-gray);
+    background-color: var(--color-neon-gren);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border-size) solid var(--color-neon-gren);
+}
+
+.button-container:hover {
+    border: var(--border-size) solid var(--color-neon-gren);
+    background-color: var(--color-very-dark-gray);
+    color: var(--color-neon-gren);
+}
+
+.arrow-icon {
+    fill: var(--color-very-dark-gray);
+}
+
+.button-container:hover .arrow-icon {
+    fill: var(--color-neon-gren);
+}
+
+.button-container:active {
+    transform: scale(1.04);
+}

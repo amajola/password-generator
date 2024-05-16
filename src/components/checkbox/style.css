@@ -1,0 +1,25 @@
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    border: var(--border-size) solid var(--color-almost-white);
+    border-radius: var(--checkbox-radius);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: calc(var(--spacing-box-sm-horizontal) - 10px);
+}
+
+.checkbox:hover {
+    border: var(--border-size) solid var(--color-neon-gren);
+}
+
+.checkbox.checked {
+    background-color: var(--color-neon-gren);
+    border: var(--border-size) solid var(--color-neon-gren);
+}

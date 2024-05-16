@@ -1,0 +1,59 @@
+.input-container {
+    width: 100%;
+    display: flex;
+    background-color: var(--color-dark-gray);
+    align-items: center;
+}
+
+.custom-input {
+    border: unset;
+    background-color: inherit;
+    display: flex;
+    min-height: var(--input-size);
+    color: var(--color-almost-white);
+    padding-left: var(--spacing-box-xl-vertical);
+    width: 90%;
+    /* Doing this so I don't cause a layout shift */
+    border: var(--border-size) solid var(--color-dark-gray);
+}
+
+.input-container-hovered {
+    border: var(--border-size) solid var(--color-neon-gren);
+}
+
+.custom-input:focus-visible {
+    border: unset;
+    outline: unset;
+}
+
+.icon-container {
+    all: unset;
+    padding: 0% var(--spacing-box-xl-vertical);
+    display: flex;
+    align-items: center;
+    gap: var(--spaceing-icon);
+}
+
+.icon-container:active {
+    transform: scale(1.1);
+}
+
+.copied-text {
+    color: var(--color-neon-gren);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.copied-text.visible {
+    opacity: 1;
+}
+
+.icon-container:hover .copy-icon {
+    fill: var(--color-almost-white);
+}
+
+.custom-input::placeholder {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: var(--font-size-lg);
+}
