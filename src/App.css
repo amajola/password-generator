@@ -52,13 +52,13 @@
     margin: var(--spacing-box-xl);
     display: flex;
     flex-direction: column;
-    gap: calc(var(--gap) + 1em);;
+    gap: calc(var(--gap) + 1em);
 }
 
 @media only screen and (max-width: 600px) {
-  .body-padding {
-    margin: var(--spacing-box-sm);
-  }
+    .body-padding {
+        margin: var(--spacing-box-sm);
+    }
 }
 
 .checkbox-container {
