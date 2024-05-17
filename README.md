@@ -7,8 +7,6 @@ This is a simple password generator application built using React, Vite, and PNP
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Live Preview
 [Passowrd Generator v1.0](https://password-generator-henna-eight.vercel.app/)
