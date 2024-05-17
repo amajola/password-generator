@@ -39,6 +39,7 @@ const Slider = ({ value, setValue, setIsManualInput }: SliderInterface) => {
           min="0"
           max="20"
           value={value}
+          onTouchEnd={() => {setIsManualInput(true)}}
           onChange={handleInputChange}
           ref={inputRef}
         />
