@@ -9,7 +9,6 @@ export const checkPasswordStrength = (password: string): number => {
   let strength = 0;
 
   const passwordLenght = password.length >= 8;
-  if (passwordLenght) strength++;
 
   // Check for lowercase, uppercase, digits, and special characters and increment strength
   if (regex.lowerCase.test(password) && passwordLenght) strength++;

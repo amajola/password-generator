@@ -6,7 +6,7 @@ interface StrenghtIndicatorInterface {
 }
 
 const StrenghtIndicator = ({ strenghtValue }: StrenghtIndicatorInterface) => {
-  const coloredIndicators = Array.from({ length: 5 }, (_, index) => {
+  const coloredIndicators = Array.from({ length: 4 }, (_, index) => {
     return strenghtValue > index;
   });
 
@@ -19,11 +19,19 @@ const StrenghtIndicator = ({ strenghtValue }: StrenghtIndicatorInterface) => {
     ["5", "strength-indicator-green"],
   ]);
 
+  const strenghtMap = new Map([
+    ["0", "TOO WEAK!"],
+    ["1", "WEAK"],
+    ["2", "MEDIUM"],
+    ["3", "STRONG"],
+    ["4", "Very Strong"],
+  ]);
+
   return (
     <div className="indicator-container">
       <p className="body strenght-text">STRENGTH</p>
       <div className="strenght-container">
-        <h3 className="heading-medium strenght-text">MEDIUM</h3>
+        <h3 className="heading-medium strenght-text">{strenghtMap.get(strenghtValue.toString())}</h3>
         <div className="strenght-indicator-container">
           {Array.from(coloredIndicators, (value, index) => {
             const color = styleMap.get(strenghtValue.toString());

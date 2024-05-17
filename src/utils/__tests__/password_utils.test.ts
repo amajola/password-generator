@@ -11,11 +11,11 @@ describe("checkPasswordStrength function", () => {
   });
 
   test("should return 1 for a password with 8 characters", () => {
-    expect(checkPasswordStrength("abcdefg1")).toBe(3);
+    expect(checkPasswordStrength("abcdefg1")).toBe(2);
   });
 
   test("should return 4 for a strong password", () => {
-    expect(checkPasswordStrength("Abcdefg1@")).toBe(5);
+    expect(checkPasswordStrength("Abcdefg1@")).toBe(4);
   });
 });
 
