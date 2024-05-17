@@ -16,7 +16,6 @@ const StrenghtIndicator = ({ strenghtValue }: StrenghtIndicatorInterface) => {
     ["2", "strenght-indicator-orange"],
     ["3", "strenght-indicator-yellow"],
     ["4", "strength-indicator-green"],
-    ["5", "strength-indicator-green"],
   ]);
 
   const strenghtMap = new Map([
@@ -29,7 +28,7 @@ const StrenghtIndicator = ({ strenghtValue }: StrenghtIndicatorInterface) => {
 
   return (
     <div className="indicator-container">
-      <p className="body strenght-text">STRENGTH</p>
+      <p className="body indicator-heading">STRENGTH</p>
       <div className="strenght-container">
         <h3 className="heading-medium strenght-text">{strenghtMap.get(strenghtValue.toString())}</h3>
         <div className="strenght-indicator-container">
